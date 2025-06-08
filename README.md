@@ -107,7 +107,7 @@ write.table(
   sep = "\t"
 )
 ```
-You can also download the saved output file from this link: [TCGA_BRCA_CDH1_protein_paint.txt](./TCGA_BRCA_CDH1_protein_paint.txt)
+You can also download the saved output file from this link: (TCGA_BRCA_CDH1_protein_paint.txt)[./TCGA_BRCA_CDH1_protein_paint.txt]
 
 ## Step 5: Visualize Mutation Data on ProteinPaint
 Video tutorial on inputting mutation files to [ProteinPaint](https://proteinpaint.stjude.org/) to generate lollipop plots.
