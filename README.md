@@ -1,4 +1,4 @@
-# 2025-05-29 - 🧬 ProteinPaint Lollipop Plot Tutorial
+# 2025-05-29 - Mutation Data Visualization using ProteinPaint
 Author: Osama Shiraz Shah<br>
 Date: 2025-05-29
 
