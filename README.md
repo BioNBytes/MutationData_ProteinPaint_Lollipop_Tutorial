@@ -4,7 +4,7 @@ Date: 2025-05-29
 
 
 ## Overview
-This tutorial will guide you through the process of creating lollipop plots from mutation data using the [ProteinPaint](https://proteinpaint.stjude.org/) tool. You will learn how to programmatically retrieve mutation data from cBioPortal, reformat it in R, and subsequently input the reformatted mutation data into [ProteinPaint](https://proteinpaint.stjude.org/) to generate interactive lollipop plots suitable for scientific presentations and publications.
+This tutorial will guide you through the process of creating lollipop plots from mutation data using the [ProteinPaint](https://proteinpaint.stjude.org/) tool. You will learn how to programmatically retrieve mutation data from cBioPortal, reformat it in R, and subsequently input the reformatted mutation data into ProteinPaint to generate interactive lollipop plots suitable for scientific presentations and publications.
 
 ## Prerequisites: 
 - **Basic familiarity with cBioPortal**: Ability to navigate and identify suitable studies with mutation data.
