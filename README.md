@@ -114,17 +114,20 @@ Video tutorial on inputting mutation files to [ProteinPaint](https://proteinpain
 [![](https://img.youtube.com/vi/_Bin_jZBcss/maxresdefault.jpg)](https://www.youtube.com/watch?v=_Bin_jZBcss)
 
 
+<br>
 
 
+## Output
 ![Plot](./image.png)
 
 
 
-## License
-This tutorial is released under the [MIT License](https://opensource.org/license/mit).
-
 <br>
 
-For questions or suggestions, feel free to open an issue or pull request! You can also contact us at [bionbytes]@[gmail.com].
+
+---
+
+For questions or suggestions, feel free to open an issue or pull request! You can also contact us at [bionbytes]@[gmail.com]. This tutorial is released under the MIT License.
+
 
 
