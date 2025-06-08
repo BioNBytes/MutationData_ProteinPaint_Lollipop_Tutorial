@@ -119,6 +119,7 @@ Video tutorial on inputting mutation files to [ProteinPaint](https://proteinpain
 
 ## Output
 ![Plot](./image.png)
+| Higher quality outputs can be generated from the app website by going into 'More' options and exporting plot as svg using 'Export SVG' option.
 
 
 
