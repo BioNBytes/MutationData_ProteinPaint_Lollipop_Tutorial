@@ -1,5 +1,5 @@
 # 2025-05-29 - 🧬 ProteinPaint Lollipop Plot Tutorial
-Author: Osama Shiraz Shah
+Author: Osama Shiraz Shah<br>
 Date: 2025-05-29
 
 ---
