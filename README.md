@@ -12,9 +12,6 @@ This tutorial will guide you through the process of creating lollipop plots from
 - **Internet access**: Required to install necessary packages, download datasets from cBioPortal and access ProteinPaint website.
 
 <br>
-
----
-
 <br>
 
 ## Step 1: Install and Load `cbioportalR`
