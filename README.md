@@ -116,7 +116,7 @@ Video tutorial on inputting mutation files to [ProteinPaint](https://proteinpain
 
 
 
-![Plot](./image.jpg)
+![Plot](./image.png)
 
 
 
