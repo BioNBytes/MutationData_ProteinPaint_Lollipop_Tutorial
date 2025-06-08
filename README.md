@@ -3,10 +3,12 @@ Author: Osama Shiraz Shah
 Date: 2025-05-29
 
 ---
+
 ## Prerequisites: 
 - **Basic familiarity with cBioPortal**: Understand how to navigate studies and identify different data types (e.g., mutation, expression, clinical).
 - **A working R environment**: R and RStudio (optional) installed and functional on your system.
 - **Internet access** 😄: Required to install necessary packages, download datasets from cBioPortal and access ProteinPaint website.
+
 ---
 
 ## Step 1: Install and Load `cbioportalR`
