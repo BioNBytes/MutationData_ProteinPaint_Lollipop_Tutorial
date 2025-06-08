@@ -2,18 +2,19 @@
 Author: Osama Shiraz Shah<br>
 Date: 2025-05-29
 
----
 
+## Overview
+This tutorial will guide you through the process of creating lollipop plots from mutation data using the [ProteinPaint](https://proteinpaint.stjude.org/) tool. You will learn how to programmatically retrieve mutation data from cBioPortal, reformat it in R, and subsequently input the reformatted mutation data into [ProteinPaint](https://proteinpaint.stjude.org/) to generate interactive lollipop plots suitable for scientific presentations and publications.
+
+---
 ## Prerequisites: 
-- **Basic familiarity with cBioPortal**: Understand how to navigate studies and identify different data types (e.g., mutation, expression, clinical).
+- **Basic familiarity with cBioPortal**: Ability to navigate and identify suitable studies with mutation data.
 - **A working R environment**: R and RStudio (optional) installed and functional on your system.
-- **Internet access** 😄: Required to install necessary packages, download datasets from cBioPortal and access ProteinPaint website.
-
+- **Internet access**: Required to install necessary packages, download datasets from cBioPortal and access ProteinPaint website.
+ 
 ---
-
 ## Step 1: Install and Load `cbioportalR`
-The environment setup is quite straightforward and we only need two packages installed in R language. One is dyplr and cbioportalR. The code chunk below guides you in this part.
-
+The following two R packages are required: 1) [dplyr](https://dplyr.tidyverse.org/) for data manipulation, and 2) [cbioportalR](https://cran.r-project.org/web/packages/cbioportalR/readme/README.html) for accessing and retrieving genomic datasets from [cBioPortal](https://www.cbioportal.org/). After installation, load both packages:
 ```r
 ## Install libraries
 # install.packages("dplyr")
@@ -22,10 +23,8 @@ The environment setup is quite straightforward and we only need two packages ins
 library(dplyr)
 library(cbioportalR)
 ```
-
-
 ## Step 2: Connecting to cBioPortal
-Now we can ensure that we have access to cBioPortal public database and can explore available studies.
+Next, establish a connection to the public cBioPortal database and explore the available studies.
 ```r
 # Set connection to public cBioPortal
 set_cbioportal_db("public")
@@ -37,10 +36,8 @@ test_cbioportal_db()
 available_studies <- available_studies()
 head(available_studies)
 ```
-
-
 ## Step 3: Retrieve Mutation Data
-For the sake of this tutorial will utilize the TCGA breast cancer study by [Ciriello et al](https://pubmed.ncbi.nlm.nih.gov/26451490/) from 2015. Here is the [link](https://www.cbioportal.org/study/summary?id=brca_tcga_pub2015) to the cBioPortal page of this study. We will use the unique study_id for this study to programmatically retrieve associated mutation data (in MAF format). Then we will subset it for the *CDH1* gene and view the identified mutation types.
+In this tutorial, we utilize the TCGA breast cancer study by [Ciriello et al.](https://pubmed.ncbi.nlm.nih.gov/26451490/) (2015). The [cBioPortal page](https://www.cbioportal.org/study/summary?id=brca_tcga_pub2015) for this study is provided. We will use the unique study_id to programmatically retrieve mutation data (in MAF format), subset it for the _CDH1_ gene, and examine the mutation types.
 ```r
 # Retrieve mutation data for CDH1 from TCGA Breast Cancer study
 TCGA_BRCA_MAF <- get_mutations_by_study(study_id = "brca_tcga_pub2015")
@@ -49,10 +46,8 @@ TCGA_BRCA_CDH1_MAF <- subset(TCGA_BRCA_MAF, hugoGeneSymbol == "CDH1") %>% as.dat
 # View mutation types
 table(as.character(TCGA_BRCA_CDH1_MAF$mutationType))
 ```
-
-
 ## Step 4: Make Mutation Names Compatible with ProteinPaint
-Now we have to convert the MAF mutation type names to ProteinPaint recognized names. This will be done in two steps. First, convert mutation names from MAF to ProteinPaint supported format. Second, convert mutation names to symbols. For second step, we will define a list containing mapping between mutation names and symbols recognized by ProteinPaint.
+Next, convert the MAF mutation type names to those recognized by ProteinPaint. This process involves two steps: first, mapping mutation names from MAF to ProteinPaint-supported formats; second, converting these names to the corresponding symbols using a mapping list between mutation names and ProteinPaint-recognized symbols.
 ```r
 # Convert MAF mutation types names to ProteinPaint recognized names
 TCGA_BRCA_CDH1_MAF$MUT_protein_paint <- ifelse(
@@ -92,10 +87,8 @@ mutation_symbol_dict <- list(
 # Map ProteinPaint mutations to symbols  
 TCGA_BRCA_CDH1_MAF$MUT_protein_paint_class <- unlist(mutation_symbol_dict[TCGA_BRCA_CDH1_MAF$MUT_protein_paint])
 ```
-
-
 ## Step 5: Save Data in Format Compatible with ProteinPaint
-ProteinPaint takes mutation input in the following format: Mutation format: mutation type name, genomic position, mutation type symbol, sample (optional). Our output file will have one mutation per line and each field being tab delimited. 
+ProteinPaint requires mutation input in the following format: mutation type name, genomic position, mutation type symbol, and optionally, sample identifier. The output file contains one mutation per line, with fields separated by tabs.
 ```r
 # Format for output
 TCGA_CDH1_protein_paint <- paste0(
@@ -115,4 +108,15 @@ write.table(
 )
 ```
 You can also download the saved output file from this link: [TCGA_BRCA_CDH1_protein_paint.txt](./TCGA_BRCA_CDH1_protein_paint.txt)
+
+## Step 5: Visualize Mutation Data on ProteinPaint
+Video tutorial on inputting mutation files to [ProteinPaint](https://proteinpaint.stjude.org/) to generate lollipop plots.
+![](https://www.youtube.com/watch?v=_Bin_jZBcss)
+## License
+This tutorial is released under the MIT License.
+
+---
+
+For questions or suggestions, feel free to open an issue or pull request! You can also contact us at [bionbytes]@[gmail.com].
+
 
