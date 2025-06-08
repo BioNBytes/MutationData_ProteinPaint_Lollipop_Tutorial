@@ -111,6 +111,11 @@ You can also download the saved output file from this link: [TCGA_BRCA_CDH1_prot
 
 ## Step 5: Visualize Mutation Data on ProteinPaint
 Video tutorial on inputting mutation files to [ProteinPaint](https://proteinpaint.stjude.org/) to generate lollipop plots.
+
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+
 ![](https://www.youtube.com/watch?v=_Bin_jZBcss)
 
 ## License
