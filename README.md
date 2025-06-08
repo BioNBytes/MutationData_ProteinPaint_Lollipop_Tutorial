@@ -115,7 +115,7 @@ Video tutorial on inputting mutation files to [ProteinPaint](https://proteinpain
 ![](https://www.youtube.com/watch?v=_Bin_jZBcss)
 
 ## License
-This tutorial is released under the MIT License.
+This tutorial is released under the [MIT License](https://opensource.org/license/mit).
 
 <br>
 <br>
