@@ -114,5 +114,5 @@ write.table(
   sep = "\t"
 )
 ```
-You can also download the saved output file from this link: ![[TCGA_BRCA_CDH1_protein_paint.txt]]
+You can also download the saved output file from this link: [TCGA_BRCA_CDH1_protein_paint.txt](./TCGA_BRCA_CDH1_protein_paint.txt)
 
