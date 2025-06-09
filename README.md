@@ -126,7 +126,5 @@ Video tutorial on inputting mutation files to [ProteinPaint](https://proteinpain
 
 ---
 
-For questions or suggestions, feel free to open an issue or pull request! You can also contact us at [bionbytes]@[gmail.com]. This tutorial is released under the MIT License.
-
-
+For questions or suggestions, feel free to open an issue or pull request! You can also contact us at [bionbytes]@[gmail.com].
 
